@@ -31,3 +31,9 @@ export default [
     },
   },
 ]
+
+"homepage": "https://<your-username>.github.io/<repository-name>",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
