@@ -1,79 +1,84 @@
+:root {
+  --primary-color: #4b5563;
+  --secondary-color: #f9fafb;
+  --element-background-color: #fff;
+  --button-color: #60a5fa;
+  --button-hover-color: #a7f3d0;
+  --primary-text-color: #1f2937;
+}
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
-  padding: 0 16px;
+  background: var(--secondary-color);
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  width: 100%;
 }
-
 header {
-  background-color: #f5ba13;
-  margin: auto -16px;
+  background-color: var(--primary-color);
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
-
 header h1 {
-  color: #fff;
+  color: var(--element-background-color);
   font-family: "McLaren", cursive;
   font-weight: 200;
 }
-
 footer {
   position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 3.5rem;
 }
-
 footer p {
   color: #ccc;
 }
 .note {
-  background: #fff;
+  background: var(--element-background-color);
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 8px 8px 5px #ccc;
   padding: 10px;
-  width: 240px;
-  margin: 16px;
+  width: 15rem;
+  margin: 0.5rem;
   float: left;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  color: var(--primary-text-color);
 }
 .note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 .note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
 .note button {
   position: relative;
   float: right;
-  margin-right: 10px;
-  color: #f5ba13;
+  margin-right: 0.3rem;
+  color: #60a5fa;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   outline: none;
 }
-
 form.create-note {
   position: relative;
-  width: 480px;
+  width: 75%;
+  min-width: 200px;
+  max-width: 500px;
   margin: 30px auto 20px auto;
-  background: #fff;
+  background: var(--element-background-color);
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
@@ -87,13 +92,14 @@ form.create-note textarea {
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  color: var(--primary-text-color);
 }
 form.create-note button {
   position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
+  right: 1rem;
+  bottom: -1rem;
+  background: var(--primary-color);
+  color: var(--element-background-color);
   border: none;
   border-radius: 50%;
   width: 36px;
@@ -101,4 +107,13 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+form.create-note button:hover,
+form.create-note button:focus {
+  background-color: var(--button-color);
+}
+.note button:hover,
+.note button:focus {
+  background-color: #fca5a5;
+  color: var(--button-color);
 }
